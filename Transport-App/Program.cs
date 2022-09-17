@@ -29,15 +29,18 @@ namespace Transport_App
             while (!exit)
             {
 
-                try 
+                try
                 {
+                    Console.ForegroundColor = ConsoleColor.Cyan;
                     Console.WriteLine("---- WELCOME TO THE TRANSPORTATION WIZARD -----");
+                    Console.ForegroundColor = ConsoleColor.Yellow;
                     Console.WriteLine("Choose one of the options:\n" +
                                       "Press 1 to add taxi\n" +
                                       "Press 2 to add Bus\n" +
-                                      "Press 3 to list\n" +
-                                      "4. Exit"); 
-                    
+                                      "Press 3 to delete\n" +
+                                      "Press 4 to list\n" +
+                                      "5. Exit");
+
                     int option = Convert.ToInt32(Console.ReadLine());
 
                     switch (option)
@@ -70,8 +73,8 @@ namespace Transport_App
                             else
                             {
                                 secondTaxi.AddPassenger(taxiTwo);
-                            }                               
-                                                                                    
+                            }
+
                             Console.WriteLine("Enter the number of passengers in the third taxi in the space below.");
                             int taxiThree = Int32.Parse(Console.ReadLine());
                             if (taxiThree > 4 || taxiThree <= 0)
@@ -84,7 +87,7 @@ namespace Transport_App
                             {
                                 thirdTaxi.AddPassenger(taxiThree);
                             }
-                                                                                                                                              
+
                             Console.WriteLine("Enter the number of passengers in the fourth taxi in the space below.");
                             int taxiFour = Int32.Parse(Console.ReadLine());
                             if (taxiFour > 4 || taxiFour <= 0)
@@ -97,7 +100,7 @@ namespace Transport_App
                             {
                                 fourthTaxi.AddPassenger(taxiFour);
                             }
-                                                                                                                                             
+
                             Console.WriteLine("Enter the number of passengers in the fifth taxi in the space below.");
                             int taxiFive = Int32.Parse(Console.ReadLine());
                             if (taxiFive > 4 || taxiFive <= 0)
@@ -109,11 +112,11 @@ namespace Transport_App
                             }
                             else
                             {
-                                fifthTaxi.AddPassenger(taxiFive);                                                                                                                                              
+                                fifthTaxi.AddPassenger(taxiFive);
                             }
                             Console.WriteLine("");
                             break;
-                        case 2:                  
+                        case 2:
                             //list Bus
                             Console.Clear();
                             Console.WriteLine("Enter the number of passengers in the first bus in the space below.");
@@ -128,7 +131,7 @@ namespace Transport_App
                             {
                                 firstBus.AddPassenger(busOne);
                             }
-                            
+
                             Console.WriteLine("Enter the number of passengers in the second bus in the space below.");
                             int busTwo = Int32.Parse(Console.ReadLine());
                             if (busTwo > 30 || busTwo <= 0)
@@ -139,7 +142,7 @@ namespace Transport_App
                             }
                             else
                             {
-                                secondBus.AddPassenger(busTwo);                                                                                                            
+                                secondBus.AddPassenger(busTwo);
                             }
 
                             Console.WriteLine("Enter the number of passengers in the third bus in the space below.");
@@ -154,7 +157,7 @@ namespace Transport_App
                             {
                                 thirdBus.AddPassenger(busThree);
                             }
-                                                                                    
+
                             Console.WriteLine("Enter the number of passengers in the fourth bus in the space below.");
                             int busFour = Int32.Parse(Console.ReadLine());
                             if (busFour > 30 || busFour <= 0)
@@ -165,7 +168,7 @@ namespace Transport_App
                             }
                             else
                             {
-                                fourthBus.AddPassenger(busFour);                            
+                                fourthBus.AddPassenger(busFour);
                             }
 
                             Console.WriteLine("Enter the number of passengers in the fifth bus in the space below.");
@@ -178,23 +181,40 @@ namespace Transport_App
                             }
                             else
                             {
-                                fifthBus.AddPassenger(busFive);                                                                                        
+                                fifthBus.AddPassenger(busFive);
 
                             }
                             Console.WriteLine("");
                             break;
                         case 3:
+                            Console.Clear();
+                            firstTaxi.DeletePassenger();
+                            secondTaxi.DeletePassenger();
+                            thirdTaxi.DeletePassenger();
+                            fourthTaxi.DeletePassenger();
+                            fifthTaxi.DeletePassenger();
+                            firstBus.DeletePassenger();
+                            secondBus.DeletePassenger();
+                            thirdBus.DeletePassenger();
+                            fourthBus.DeletePassenger();
+                            fifthBus.DeletePassenger();
+                            Console.WriteLine("The transports were emptied.");
+                            Console.WriteLine("");
+                            break;
+                        case 4:
                             //show taxis and bus
                             Console.Clear();
-                            Console.WriteLine(                                         
+                            Console.WriteLine("---------------- TRANSPORT LIST ---------------");
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine(
                                               $"List of Taxis:\n" +
                                               $"Taxi patent {firstTaxi.Patent}: carrying {firstTaxi.Passengers} passengers.\n" +
                                               $"Taxi patent {secondTaxi.Patent}: carrying {secondTaxi.Passengers} passengers.\n" +
                                               $"Taxi patent {thirdTaxi.Patent}: carrying {thirdTaxi.Passengers} passengers.\n" +
                                               $"Taxi patent {fourthTaxi.Patent}: carrying {fourthTaxi.Passengers} passengers.\n" +
                                               $"Taxi patent {fifthTaxi.Patent}: carrying {fifthTaxi.Passengers} passengers.\n" +
-                                        
-                                              $"List of Buses:\n" +
+
+                                              $"\t\tList of Buses:\n" +
                                               $"Taxi patent {firstBus.Line}: carrying {firstBus.Passengers} passengers.\n" +
                                               $"Taxi patent {secondBus.Line}: carrying {secondBus.Passengers} passengers.\n" +
                                               $"Taxi patent {thirdBus.Line}: carrying {thirdBus.Passengers} passengers.\n" +
@@ -203,7 +223,7 @@ namespace Transport_App
                                               );
 
                             break;
-                        case 4:
+                        case 5:
                             Console.Clear();
                             Console.WriteLine("Press enter to close...");
                             exit = true;
@@ -219,6 +239,7 @@ namespace Transport_App
                     Console.WriteLine(e.Message);
                 }
             }
+
 
             Console.ReadLine();
 

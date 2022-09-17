@@ -19,6 +19,7 @@ namespace Transport_App
         public int Passengers { get => _passengers; set => _passengers = value; }
 
         public abstract int AddPassenger(int passenger);
+        public abstract void DeletePassenger();
         public abstract string MoveForeward();
         public abstract string Stop();
 

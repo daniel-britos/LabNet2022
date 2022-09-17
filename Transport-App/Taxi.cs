@@ -18,7 +18,11 @@ namespace Transport_App
         {
             return Passengers += passenger;
         }
-        
+        public override void DeletePassenger()
+        {
+            Passengers = 0;
+        }
+
         public override string MoveForeward()
         {
             return "Method MoveForeward turned off in Taxi class.";
