@@ -22,6 +22,19 @@ namespace Extensions_Exceptions_Units.Extensions.Tests
 
             //Assert.Fail(); Exception result.
         }
+        [TestMethod()]
+        [ExpectedException(typeof(DivideByZeroException))]
+        public void DivideSingleNumberTest1()
+        {
+            int number = 20;
+            int dividerNumber = number / 0;
+
+            Exception ex = new Exception(); 
+            string msgEx = ex.Message;            
+
+            Assert.AreEqual(dividerNumber, msgEx);
+       
+        }
 
         [TestMethod()]
         public void DivideTwoNumbersTest()
