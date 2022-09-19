@@ -29,10 +29,10 @@ namespace Extensions_Exceptions_Units.Extensions.Tests
             int number = 20;
             int dividerNumber = number / 0;
 
-            Exception ex = new Exception();
-            string msgEx = ex.Message;
 
-            Assert.AreEqual(dividerNumber, msgEx);
+            //Exception ex = new Exception();
+            //string msgEx = ex.Message;
+            //Assert.AreEqual(dividerNumber, msgEx);
 
         }
 
@@ -51,10 +51,5 @@ namespace Extensions_Exceptions_Units.Extensions.Tests
             Assert.AreEqual(dividerNumber, result);
         }
 
-        [TestMethod()]
-        public void DivideTwoNumbersTest1()
-        {
-            MyExtension.DivideTwoNumbers(10, 0);
-        }
     }
 }
