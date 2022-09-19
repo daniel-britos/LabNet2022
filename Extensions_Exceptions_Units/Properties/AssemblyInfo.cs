@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Transport-App")]
+[assembly: AssemblyTitle("Extensions_Exceptions_Units")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Transport-App")]
+[assembly: AssemblyProduct("Extensions_Exceptions_Units")]
 [assembly: AssemblyCopyright("Copyright ©  2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("a0ca8899-8d93-4534-b1de-f205ae9a9cfe")]
+[assembly: Guid("4677ed17-7098-4e44-aa05-b0a1552f66ed")]
 
 // Version information for an assembly consists of the following four values:
 //
