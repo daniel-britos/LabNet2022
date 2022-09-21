@@ -12,6 +12,7 @@ namespace Extensions_Exceptions_Units.Extensions.Tests
     public class MyExtensionTests
     {
         [TestMethod()]
+        [ExpectedException(typeof(DivideByZeroException))]
         public void DivideSingleNumberTest()
         {
             //arrage

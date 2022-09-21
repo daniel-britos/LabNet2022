@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Extensions\MyExtension.cs" />
     <Compile Include="Logic.cs" />
+    <Compile Include="Functions\FunctionsMain.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
