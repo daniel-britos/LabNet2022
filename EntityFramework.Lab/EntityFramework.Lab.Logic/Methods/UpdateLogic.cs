@@ -45,23 +45,20 @@ namespace EntityFramework.Lab.Logic
         {
             try
             {
-                OrdersLogic orders = new OrdersLogic();
-
-                foreach (Orders or in orders.GetAll())
+                OrdersLogic ordersLogic = new OrdersLogic();
+                foreach (Orders or in ordersLogic.GetAll())
                 {
-                    Console.WriteLine($"{or.OrderID}, {or.ShipAddress}");
+                    Console.WriteLine($"Order Number: {or.OrderID}, {or.ShipAddress}");
                 }
 
                 Orders order = new Orders();
-                Console.WriteLine("Enter an ID..");
+                Console.WriteLine("Enter an order number..");
                 int id = Convert.ToInt32(Console.ReadLine());
                 order.OrderID = id;
                 Console.WriteLine("Enter a new adress:");
                 string name = Console.ReadLine();
                 order.ShipAddress = name;
                 Console.WriteLine("Updated order..");
-
-                OrdersLogic ordersLogic = new OrdersLogic();
                 ordersLogic.Update(order);
             }
             catch (Exception ex)
