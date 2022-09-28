@@ -17,9 +17,18 @@ namespace EntityFramework.Lab.Logic
         }
         public void Add(Orders newOrder)
         {
-            _context.Orders.Add(newOrder);
+            try
+            {
+                _context.Orders.Add(newOrder);
 
-            _context.SaveChanges();
+                _context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine("Press enter");
+                Console.ReadKey(true);
+            }
         }
         public void Update(Orders order)
         {
@@ -34,21 +43,41 @@ namespace EntityFramework.Lab.Logic
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
+                Console.WriteLine("Press enter");
+                Console.ReadKey(true);
             }
         }
         public void Delete(int id)
         {
-            var orderDelete = _context.Orders.Find(id);
+            try
+            {
+                var orderDelete = _context.Orders.Find(id);
 
-            _context.Orders.Remove(orderDelete);
+                _context.Orders.Remove(orderDelete);
 
-            _context.SaveChanges();
+                _context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine("Press enter");
+                Console.ReadKey(true);
+            }
         }
         public void Search(int id)
-        {            
-            var employee = _context.Employees.Find(id);
-            var orders = _context.Orders.Where(o => o.EmployeeID == id);
-            Console.WriteLine($"Employee: {employee.LastName}, {employee.FirstName} | Quantity of orders: {orders.Count()}");
+        {
+            try
+            {
+                var employee = _context.Employees.Find(id);
+                var orders = _context.Orders.Where(o => o.EmployeeID == id);
+                Console.WriteLine($"Employee: {employee.LastName}, {employee.FirstName} | Quantity of orders: {orders.Count()}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine("Press enter");
+                Console.ReadKey(true);
+            }
         }
     }
 }

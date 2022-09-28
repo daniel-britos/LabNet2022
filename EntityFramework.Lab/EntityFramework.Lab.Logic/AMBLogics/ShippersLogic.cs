@@ -15,9 +15,18 @@ namespace EntityFramework.Lab.Logic.AMBLogics
         }
         public void Add(Shippers shipper)
         {
-            _context.Shippers.Add(shipper);
+            try
+            {
+                _context.Shippers.Add(shipper);
 
-            _context.SaveChanges();
+                _context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine("Press enter");
+                Console.ReadKey(true);
+            }
         }
         public void Update(Shippers shipper)
         {
@@ -32,20 +41,40 @@ namespace EntityFramework.Lab.Logic.AMBLogics
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
+                Console.WriteLine("Press enter");
+                Console.ReadKey(true);
             }
         }
         public void Delete(int id)
         {
-            var shipperDelete = _context.Shippers.Find(id);
+            try
+            {
+                var shipperDelete = _context.Shippers.Find(id);
 
-            _context.Shippers.Remove(shipperDelete);
+                _context.Shippers.Remove(shipperDelete);
 
-            _context.SaveChanges();
+                _context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine("Press enter");
+                Console.ReadKey(true);
+            }
         }
         public void Search(int id)
         {
-            var shipper = _context.Shippers.Find(id);
-            Console.WriteLine($"Company name: {shipper.CompanyName}, Phone: {shipper.Phone}");
+            try
+            {
+                var shipper = _context.Shippers.Find(id);
+                Console.WriteLine($"Company name: {shipper.CompanyName}, Phone: {shipper.Phone}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine("Press enter");
+                Console.ReadKey(true);
+            }
         }
     }
 }

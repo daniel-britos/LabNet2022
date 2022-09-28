@@ -14,6 +14,12 @@ namespace EntityFramework.Lab.Logic
         {
             try
             {
+                EmployeesLogic employees = new EmployeesLogic();
+
+                foreach (Employees emp in employees.GetAll())
+                {
+                    Console.WriteLine($"{emp.EmployeeID} - Employee: {emp.LastName}, {emp.FirstName}");
+                }
                 Employees employee = new Employees();
                 Console.WriteLine("Enter an ID:");
                 int id = Convert.ToInt32(Console.ReadLine());
@@ -39,8 +45,15 @@ namespace EntityFramework.Lab.Logic
         {
             try
             {
+                OrdersLogic orders = new OrdersLogic();
+
+                foreach (Orders or in orders.GetAll())
+                {
+                    Console.WriteLine($"{or.OrderID}, {or.ShipAddress}");
+                }
+
                 Orders order = new Orders();
-                Console.WriteLine("Enter an ID between 10248 to 11078 to see the order adress:");
+                Console.WriteLine("Enter an ID..");
                 int id = Convert.ToInt32(Console.ReadLine());
                 order.OrderID = id;
                 Console.WriteLine("Enter a new adress:");

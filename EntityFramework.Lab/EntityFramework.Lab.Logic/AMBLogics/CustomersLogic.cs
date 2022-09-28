@@ -11,7 +11,7 @@ namespace EntityFramework.Lab.Logic.AMBLogics
     {
         public List<Customers> GetAll()
         {
-            return _context.Customers.ToList();
+            return _context.Customers.ToList();         
         }
     }
 }

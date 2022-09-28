@@ -15,9 +15,18 @@ namespace EntityFramework.Lab.Logic
         }
         public void Add(Employees newEmployee)
         {
-            _context.Employees.Add(newEmployee);
+            try
+            {
+                _context.Employees.Add(newEmployee);
 
-            _context.SaveChanges();
+                _context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine("Press enter");
+                Console.ReadKey(true);
+            }
         }
         public void Update(Employees employee)
         {
@@ -32,21 +41,41 @@ namespace EntityFramework.Lab.Logic
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);  
+                Console.WriteLine(ex.Message);
+                Console.WriteLine("Press enter");
+                Console.ReadKey(true);
             }
         }
         public void Delete(int id)
         {
-            var employeeDelete = _context.Employees.Find(id);
+            try
+            {
+                var employeeDelete = _context.Employees.Find(id);
 
-            _context.Employees.Remove(employeeDelete);
+                _context.Employees.Remove(employeeDelete);
 
-            _context.SaveChanges();
+                _context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine("Press enter");
+                Console.ReadKey(true);
+            }
         }
         public void Search(int id)
         {
-            var employee = _context.Employees.Find(id);
-            Console.WriteLine($"Employee {employee.LastName}, {employee.FirstName} found..");
+            try
+            {
+                var employee = _context.Employees.Find(id);
+                Console.WriteLine($"Employee {employee.LastName}, {employee.FirstName} found..");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine("Press enter");
+                Console.ReadKey(true);
+            }
         }
     }
 }
