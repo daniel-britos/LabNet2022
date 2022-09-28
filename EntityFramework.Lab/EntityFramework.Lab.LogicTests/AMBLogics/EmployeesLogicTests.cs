@@ -17,9 +17,9 @@ namespace EntityFramework.Lab.Logic.Tests
         public void AddTest()
         {
             //ARRAGE
-            EmployeesLogic employeeLogic = new EmployeesLogic();  
+            EmployeesLogic employeeLogic = new EmployeesLogic();
             Employees employees = new Employees();
-            employees.FirstName = "Daniel"; 
+            employees.FirstName = "Daniel";
             employees.LastName = "Britos";
 
             //ACT
@@ -28,9 +28,16 @@ namespace EntityFramework.Lab.Logic.Tests
             //ASSERT            
 
 
-            //List<Employees> empList = employeeLogic.GetAll().ToList();
-            //Employees emps = empList[empList.Count() - 1]; 
-            //Assert.AreEqual(employees, emps);  
+            List<Employees> empList = employeeLogic.GetAll().ToList();
+            Employees emps = empList[empList.Count() - 1];
+            Assert.AreEqual(employees, emps);
         }
-    }
+
+        [TestMethod()]
+        public void GetAllTest()
+        {
+            EmployeesLogic employeesLogic = new EmployeesLogic();
+            Assert.IsTrue(employeesLogic.GetAll().Any()); 
+        }
+    } 
 }
