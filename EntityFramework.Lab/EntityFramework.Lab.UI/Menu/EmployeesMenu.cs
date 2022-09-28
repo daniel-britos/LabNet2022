@@ -47,7 +47,7 @@ namespace EntityFramework.Lab.UI
                         Console.WriteLine("-----------------------------------");
                         Console.WriteLine();
                         Console.WriteLine("Press another option..");
-                        Menu();
+                        Menu();                                                    
                         break;
                     case "3":
                         Console.Clear();

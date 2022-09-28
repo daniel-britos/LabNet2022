@@ -15,10 +15,24 @@ namespace EntityFramework.Lab.Logic
             try
             {
                 Employees employees = new Employees();
-                Console.Write("Enter the name of the employee: ");
-                employees.FirstName = Console.ReadLine();
-                Console.Write("Enter the last name of the employee: ");
-                employees.LastName = Console.ReadLine();
+
+                Console.Write("Enter the name of employee: ");
+                string name = Console.ReadLine();
+                while (name == "")
+                {
+                    Console.Write("You must enter a name:\t");
+                    name = Console.ReadLine();
+                }
+                employees.FirstName = name;              
+                
+                Console.Write("Enter the last name of employee: ");
+                string lastName = Console.ReadLine();   
+                while (lastName == "")
+                {
+                    Console.Write("You must enter a last name:\t");
+                    lastName = Console.ReadLine();
+                }
+                employees.LastName = lastName;
                 EmployeesLogic employeesLogic = new EmployeesLogic();
                 employeesLogic.Add(employees);
             }
@@ -35,7 +49,13 @@ namespace EntityFramework.Lab.Logic
             {
                 Orders orders = new Orders();
                 Console.Write("Enter an address for your order..");
-                orders.ShipAddress = Console.ReadLine();
+                string adress = Console.ReadLine();
+                while (adress == "")
+                {
+                    Console.Write("You must enter an adress:\t");
+                    adress = Console.ReadLine();
+                }
+                orders.ShipAddress = adress;
                 OrdersLogic ordersLogic = new OrdersLogic();
                 ordersLogic.Add(orders);
             }
@@ -52,9 +72,24 @@ namespace EntityFramework.Lab.Logic
             {
                 Shippers shipper = new Shippers();
                 Console.Write("Enter a name for company shipper..");
-                shipper.CompanyName = Console.ReadLine();
+                string nameCompany = Console.ReadLine();
+                while (nameCompany == "")
+                {
+                    Console.Write("You must enter a name:\t");
+                    nameCompany = Console.ReadLine();
+                }
+                shipper.CompanyName = nameCompany;
+
                 Console.Write("Enter a phone number..");
-                shipper.Phone = Console.ReadLine();
+                string phone = Console.ReadLine();
+                while (phone == "")
+                {
+                    Console.Write("You must enter a phone number:\t");
+                    phone = Console.ReadLine();
+                }
+                shipper.Phone = phone;
+
+
                 ShippersLogic shipperLogic = new ShippersLogic();
                 shipperLogic.Add(shipper);
             }
