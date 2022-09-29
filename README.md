@@ -1,25 +1,25 @@
-<h1> Lab NET - Angular 2022 <h1>
+<h5> Lab NET - Angular 2022 </h5>
 
  <ul>
     <li>
-      <h4>Git & GitHub</h4>      
+      <h6>Git & GitHub</h6>      
     </li>
     <li>
-      <h4>C# - POO</h4>      
+      <h6>C# - POO</h6>      
     </li>
     <li>
-      <h4>Extension Methods - Exceptions - Unit Tests</h4>      
+      <h6>Extension Methods - Exceptions - Unit Tests</h6>      
     </li>
         <li>
-      <h4>SQL - SQLServer</h4>      
+      <h6>SQL - SQLServer</h6>      
     </li>
         <li>
-      <h4>Entity Framework</h4>      
+      <h6>Entity Framework</h6>      
     </li>
         <li>
-      <h4>LINQ</h4>      
+      <h6>LINQ</h6>      
     </li>
         <li>
-      <h4>HTML - CSS - Javascript</h4>      
+      <h6>HTML - CSS - Javascript</h6>      
     </li>
 </ul>
