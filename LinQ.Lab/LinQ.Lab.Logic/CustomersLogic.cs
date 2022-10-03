@@ -1,6 +1,7 @@
 ﻿using LinQ.Lab.Entities;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,7 +33,16 @@ namespace LinQ.Lab.Logic
             var query = from c in _context.Customers select c;
             return query.ToList();
         }
+        //8. Query para devolver los primeros 3 Customers de la  Región WA
 
+        public List<Customers> GetFirstThreeCustomers()
+        {
+            var query = from c in _context.Customers
+                        where c.Region == "WA"
+                        select c;
+            query.Take(3);
+            return query.ToList();
+        }
 
     }
 }

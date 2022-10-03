@@ -36,5 +36,8 @@ namespace LinQ.Lab.Logic
             var firstOrNull = _context.Products.FirstOrDefault(p => p.ProductID == 789);
             return firstOrNull;            
         }
+
+        //9. Query para devolver lista de productos ordenados por nombre
+
     }
 }

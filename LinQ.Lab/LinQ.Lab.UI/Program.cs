@@ -14,6 +14,7 @@ namespace LinQ.Lab.UI
         {
             ProductsLogic products = new ProductsLogic();
             CustomersLogic customers = new CustomersLogic();
+            OrdersLogic orders = new OrdersLogic();
             //foreach (Customers item in customers.GetAll())
             //{
             //Console.WriteLine($"{item.CustomerID} - {item.CompanyName} - {item.ContactName}");
@@ -65,12 +66,33 @@ namespace LinQ.Lab.UI
             //    Console.WriteLine($"UPPER CASE: {item.ContactName.ToUpper()} | lower case: {item.ContactName.ToLower()}");
             //}
 
-
-
-
+            //7. JOIN ENTRE CUSTOMERS Y ORDERS
+            //int i = 0;
+            //int clear = 0;
+            //foreach (var item in orders.CustomersAndOrders())
+            //{
+            //    i++;
+            //    if(i == 3)
+            //    {
+            //        i = clear;
+            //        Console.WriteLine(item);
+            //        Console.WriteLine();
+            //    }                    
+            //    else
+            //        Console.WriteLine(item);
+            //}
+            
+            //8 PRIMEROS 3 CUSTOMERS
+            //var firstThree = customers.GetFirstThreeCustomers();
+            //foreach (var item in firstThree) 
+            //{
+            //    Console.WriteLine($"Region: {item.Region} - Name: {item.ContactName}");
+            //}
+            
 
             Console.ReadKey();
 
         }
     }
 }
+ 
