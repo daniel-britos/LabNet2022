@@ -52,6 +52,9 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="subMenu\Menu.cs" />
+    <Compile Include="subMenu\OptionalTasksMenu.cs" />
+    <Compile Include="subMenu\RequiredTasksMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

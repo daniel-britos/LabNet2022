@@ -48,15 +48,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseLogic.cs" />
-    <Compile Include="CustomersLogic.cs" />
-    <Compile Include="OrdersLogic.cs" />
-    <Compile Include="ProductsLogic.cs" />
+    <Compile Include="ClassLogic\BaseLogic.cs" />
+    <Compile Include="ClassLogic\CustomersLogic.cs" />
+    <Compile Include="ClassLogic\ProductsLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShowLogic.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
+    <None Include="ClassLogic\packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LinQ.Lab.Data\LinQ.Lab.Data.csproj">

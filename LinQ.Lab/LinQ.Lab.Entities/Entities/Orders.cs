@@ -1,6 +1,5 @@
 namespace LinQ.Lab.Entities
 {
-
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
@@ -45,6 +44,7 @@ namespace LinQ.Lab.Entities
 
         [StringLength(15)]
         public string ShipCountry { get; set; }
-    }
 
+        public virtual Customers Customers { get; set; }
+    }
 }
