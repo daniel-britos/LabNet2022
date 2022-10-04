@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/main.css">
+    <title>TP-6</title>
+</head>
+<body>
+    <header>
+        <h1>LabNet2022 - HTML, CSS, JS</h1>
+    </header>
+    <main>
+        <h2>Contacto</h2>
+        <h3>Completa tus datos.</h3>
+        <form action="">                  
+            <h4>Información personal</h4>
+            <div class="container-info">
+                <div>
+                    <label for="name">Nombre</label>
+                    <input id="name" type="text" name="name" placeholder="Ingresar nombre..">                        
+                    <p id="errorName"></p>
+                </div>
+
+                <div>
+                    <label for="lastName">Apellido</label>
+                    <input id="lastName" type="text" name="lastName" placeholder="Ingresar apellido..">                        
+                    <p id="errorLastName"></p>
+                </div>
+
+                <div>
+                    <label for="age">Edad</label>
+                    <input id="age" type="number"  name="age"  placeholder="Ingresar edad...">                    
+                </div>
+            </div>
+            <ul class="container-genre">
+                <li>
+                    <label>
+                        <input type="radio" name="genre"/>
+                        Masculino
+                    </label>                                                
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="genre" id="" />
+                        Femenino
+                    </label>                        
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="genre"/>
+                        Otro
+                    </label>                        
+                </li>
+            </ul>
+            <h4>Información adicional</h4>
+            <textarea id="aditional" cols="30" rows="5"></textarea>
+            <div class="container-btn">
+                <input type="submit" value="Send" id="submit" onclick="return sendForm()">
+                <button type="submit" id="btnClear" onclick="deleteForm()">Clear</button>
+            </div>
+        </form>                
+    </main>
+
+    <script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>

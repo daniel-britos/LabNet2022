@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-image: url(../img/imgcsharp.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header,
+main {
+    max-width: 1224px;
+    margin: 0 auto; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    list-style: armenian;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    background: rgb(169, 34, 179);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border: black solid 2px;
+    box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.5);
+}
+form h4{
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    border-bottom: 1px solid white;
+}
+main {
+    display: flex;
+    flex-direction: column;
+}
+.container-info div {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+.container-info div label {
+    color: white;
+}
+.container-info div input {
+    border-radius: 5px;
+}
+.container-info div input:hover {
+    padding: 2px;
+}
+textarea {
+    border-radius: 5px;
+    margin-bottom: 15px;
+
+}
+textarea:hover {
+    padding: 3px;
+}
+header h1 {
+    padding: 15px;
+    border-bottom: black 2px solid;
+    border-left: black 2px solid;
+    border-right: black 2px solid;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+main h2 {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    color: white;
+}
+main h3 {
+    margin-top: 5px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: white;
+}
+.container-genre {
+    margin-top: 15px;
+    color: white;
+}
+
+#submit {
+    margin: 5px;
+    padding: 0;
+    width: 100px;
+    border-radius: 5px;
+    border: 2px black solid;    
+}
+#submit:hover {
+    padding: 3px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    cursor: pointer;
+}
+#btnClear{
+    margin: 5px;
+    padding: 0;
+    width: 100px;
+    border-radius: 5px;
+    border: 2px black solid;
+}
+#btnClear:hover {
+    padding: 3px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    cursor: pointer;
+}
+.container-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#errorLastName {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+}
+#errorName {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+}
