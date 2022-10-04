@@ -75,6 +75,8 @@ header h1 {
     border-left: black 2px solid;
     border-right: black 2px solid;
     background-color: rgba(255, 255, 255, 0.5);
+    animation-name: contact;
+    animation-duration: 10s;
 }
 main h2 {
     margin-bottom: 0;
@@ -131,3 +133,12 @@ main h3 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 0;
 }
+
+/*ANIMATION */
+@keyframes contact {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+  }
+
