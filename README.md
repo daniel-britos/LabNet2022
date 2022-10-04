@@ -10,16 +10,19 @@
     <li>
       <h6>Extension Methods - Exceptions - Unit Tests</h6>      
     </li>
-        <li>
+    <li>
       <h6>SQL - SQLServer</h6>      
     </li>
-        <li>
+    <li>
       <h6>Entity Framework</h6>      
     </li>
-        <li>
+    <li>
       <h6>LINQ</h6>      
     </li>
-        <li>
+    <li>
       <h6>HTML - CSS - Javascript</h6>      
+    </li>    
+    <li>
+      <h6>MVC</h6>      
     </li>
 </ul>
