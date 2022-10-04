@@ -93,7 +93,9 @@ main h3 {
     margin-top: 15px;
     color: white;
 }
-
+#age {
+    width: 120px;
+}
 #submit {
     margin: 5px;
     padding: 0;
