@@ -3,7 +3,7 @@
 @{
     ViewBag.Tittle = "Shipper Panel";
 }
-
+<h3 class="panels">SHIPPER PANEL ACTION</h3>
 @using (Html.BeginForm("InsertUpdate", "Shippers", FormMethod.Post))
 {
     @Html.AntiForgeryToken()
@@ -14,7 +14,9 @@
         @class = "form-control",
         placeholder = "Name of the company.."
     })
-    @Html.ValidationMessageFor(m => m.NameOfCompany)
+    <span style="color: red; font-weight: 600;">
+        @Html.ValidationMessageFor(m => m.NameOfCompany)
+    </span>
 </div>
 
 <div class="form-group">
@@ -24,13 +26,15 @@
         @class = "form-control",
         placeholder = "Phone number of the company..."
     })
-    @Html.ValidationMessageFor(m => m.PhoneNumber)
+    <span style="color: red; font-weight: 600;">
+        @Html.ValidationMessageFor(m => m.PhoneNumber)
+    </span>
 </div>
 
-    <div>
-        <input type="submit" class="btn btn-success" value="Confirm" />
-        @Html.ActionLink("Back", "Index", "Home", new { @class = "btn btn-info" })
-    </div>
+<div>
+    <input type="submit" class="btn btn-success" value="Confirm" />
+    @Html.ActionLink("Back", "Index", "Home", new { @class = "btn btn-info" })
+</div>
 
 }
 

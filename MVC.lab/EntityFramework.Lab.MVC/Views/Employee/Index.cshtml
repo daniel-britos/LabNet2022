@@ -19,10 +19,10 @@
         @foreach (var employee in Model)
         {
             <tr>
-                <td class="bg-danger text-center">@employee.Id</td>
-                <td class="bg-success text-center">@employee.Name</td>
-                <td class="bg-success text-center">@employee.LastName</td>
-                <td class="bg-info text-center">@employee.Phone</td>
+                <td>@employee.Id</td>
+                <td>@employee.Name</td>
+                <td>@employee.LastName</td>
+                <td>@employee.Phone</td>
                 <td class="text-center">
                     @Html.ActionLink("Update", "Update", new { id = employee.Id }, new { @class = "btn btn-warning btn-sm" })
                 </td>
