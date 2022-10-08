@@ -10,7 +10,8 @@
             <th scope="col">Name</th>
             <th scope="col">Last Name</th>
             <th scope="col">Home Phone</th>
-            <th scope="col">Action</th>
+            <th scope="col">Update Employee</th>
+            <th scope="col">Delete Employee</th>
         </tr>
     </thead>
 
@@ -22,9 +23,11 @@
                 <td class="bg-success text-center">@employee.Name</td>
                 <td class="bg-success text-center">@employee.LastName</td>
                 <td class="bg-info text-center">@employee.Phone</td>
-                <td>
+                <td class="text-center">
+                    @Html.ActionLink("Update", "Update", new { id = employee.Id }, new { @class = "btn btn-warning btn-sm" })
+                </td>
+                <td class="text-center">
                     @Html.ActionLink("Delete", "Delete", new { id = employee.Id }, new { @class = "btn btn-danger btn-sm" })
-                    @Html.ActionLink("Update", "Update", new { id = employee.Id }, new { @class = "btn btn-success btn-sm" })
                 </td>
             </tr>
         }
@@ -33,5 +36,8 @@
 </table>
 
 <div>
-    @Html.ActionLink("New Employee", "Create", "Employee", new { @class = "btn btn-info" });
+    @Html.ActionLink("New Employee", "Create", "Employee", new { @class = "btn btn-success" })
+    <button class="btn btn-info" style="color: white; background-color: white;">
+        @Html.ActionLink("Home", "Index", "Home")
+    </button>
 </div>

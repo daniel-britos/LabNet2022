@@ -30,10 +30,16 @@ namespace EntityFramework.Lab.MVC.Controllers
             return View(shippersView);
         }
 
-        [HttpPost]
-        public ActionResult InsertUpdate(int id)
+
+
+
+
+
+
+        [HttpGet]
+        public ActionResult InsertUpdate(int? id)
         {
-            if(id == 0 || id == null)
+            if (id == null)
             {
                 return View();
             }
@@ -55,9 +61,6 @@ namespace EntityFramework.Lab.MVC.Controllers
                     return RedirectToAction("Index", "Error");
                 }
             }
-
-
-            
         }
 
         [HttpPost]
