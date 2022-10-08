@@ -1,0 +1,38 @@
+﻿@model EntityFramework.Lab.MVC.Models.ShippersView
+
+@{
+    ViewBag.Tittle = "Shipper Panel";
+}
+
+@using (Html.BeginForm("InsertUpdate", "Shippers", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+<div class="form-group">
+    <label>Company Name: </label>
+    @Html.TextBoxFor(m => m.NameOfCompany, new
+    {
+        @class = "form-control",
+        placeholder = "Name of the company.."
+    })
+    @Html.ValidationMessageFor(m => m.NameOfCompany)
+</div>
+
+<div class="form-group">
+    <label>Phone Number: </label>
+    @Html.TextBoxFor(m => m.PhoneNumber, new
+    {
+        @class = "form-control",
+        placeholder = "Phone number of the company..."
+    })
+    @Html.ValidationMessageFor(m => m.PhoneNumber)
+</div>
+
+    <div>
+        <input type="submit" class="btn btn-success" value="Add" />
+        @Html.ActionLink("Back", "Index", "Shippers", new { @class = "btn btn-info" });
+    </div>
+
+}
+
+
+

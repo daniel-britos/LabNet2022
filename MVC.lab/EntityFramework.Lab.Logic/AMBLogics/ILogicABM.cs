@@ -13,6 +13,5 @@ namespace EntityFramework.Lab.Logic
         void Add(T newParameter);
         void Update(T parameter);
         void Delete(int id);
-        void Search(int id);
     }
 }

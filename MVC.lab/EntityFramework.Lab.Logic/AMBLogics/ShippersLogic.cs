@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -62,19 +63,15 @@ namespace EntityFramework.Lab.Logic.AMBLogics
                 Console.ReadKey(true);
             }
         }
-        public void Search(int id)
+        public Shippers Search(int? id)
         {
-            try
-            {
-                var shipper = _context.Shippers.Find(id);
-                Console.WriteLine($"Company name: {shipper.CompanyName}, Phone: {shipper.Phone}");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                Console.WriteLine("Press enter");
-                Console.ReadKey(true);
-            }
+            return _context.Shippers.Find(id);            
+        }
+        public List<Shippers> FindShippers(int id)
+        {
+            var shippers = _context.Shippers.ToList().Take(id);
+
+            return shippers.ToList();
         }
     }
 }

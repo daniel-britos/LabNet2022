@@ -36,6 +36,7 @@ namespace EntityFramework.Lab.Logic
 
                 employeeUpdate.LastName = employee.LastName;
                 employeeUpdate.FirstName = employee.FirstName;
+                employeeUpdate.HomePhone = employee.HomePhone;
 
                 _context.SaveChanges();
             }
@@ -63,19 +64,9 @@ namespace EntityFramework.Lab.Logic
                 Console.ReadKey(true);
             }
         }
-        public void Search(int id)
+        public Employees Search(int id)
         {
-            try
-            {
-                var employee = _context.Employees.Find(id);
-                Console.WriteLine($"Employee {employee.LastName}, {employee.FirstName} found..");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                Console.WriteLine("Press enter");
-                Console.ReadKey(true);
-            }
+            return _context.Employees.Find(id);
         }
     }
 }

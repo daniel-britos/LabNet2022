@@ -1,0 +1,44 @@
+﻿@model List<EntityFramework.Lab.MVC.Models.ShippersView>
+
+@{
+    ViewBag.Tittle = "Shipper Panel";
+}
+
+
+<table class="table table-bordered">
+    <thead class="bg-primary">
+        <tr>
+            <th scope="col">Shipper ID</th>
+            <th scope="col">Company Name</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Update</th>
+            <th scope="col">Delete</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var s in Model)
+        {
+            <tr>
+                <td>s.Id</td>
+                <td>@s.NameOfCompany</td>
+                <td>@s.PhoneNumber</td>
+                <td>
+                    @Html.ActionLink("Update", "InsertUpdate", new { id = s.Id }, new { @class = "btn btn-success btn-sm" })
+                </td>
+                <td>
+                    @Html.ActionLink("Delete", "Delete", new { id = s.Id }, new { @class = "btn btn-danger btn-sm" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div>
+    @Html.ActionLink("Add", "InsertUpdate", "Shippers", new { @class = "btn btn-success" })
+    @Html.ActionLink("Back", "Index", "Shippers", new { @class = "btn btn-info" })
+</div>
+
+
+
+
