@@ -1,0 +1,21 @@
+﻿#body-styles {
+    background-image: url("https://www.zdnet.com/a/img/resize/0a6b0be2f543ddbf313fc83a706b807b77c3c202/2021/07/19/8a337c80-5ed6-43a1-98fb-b981d420890f/programming-languages-shutterstock-1680857539.jpg?auto=webp&fit=crop&height=900&width=1200");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.body-content {
+    background-color: rgba(255,255,255, 0.5);
+}
+.home-name {
+    background-color: rgba(0,255,255, 0.5); 
+}
+    .home-name h1 {
+        font-family: 'Death Star';
+        color: black;
+        text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+    }
+.home-name p{
+    border-top: 2px solid black;
+   text-transform: uppercase;
+}

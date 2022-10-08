@@ -14,15 +14,15 @@ namespace EntityFramework.Lab.MVC.Controllers
         }
 
         public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
+        {   
+            ViewBag.Message = "My application description";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "How to contact me";
 
             return View();
         }
