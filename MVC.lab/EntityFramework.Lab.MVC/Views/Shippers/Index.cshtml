@@ -12,6 +12,7 @@
             <th scope="col">Phone</th>
             <th scope="col">Update shipper</th>
             <th scope="col">Delete shipper</th>
+            <th scope="col">See shipper</th>
         </tr>
     </thead>
     <tbody>
@@ -27,12 +28,15 @@
                 <td class="text-center">
                     @Html.ActionLink("Delete", "Delete", new { id = s.Id }, new { @class = "btn btn-danger btn-sm" })
                 </td>
+                <td>
+                    @Html.ActionLink("See", "Consult", new { id = s.Id }, new { @class = "btn btn-primary" })
+                </td>
             </tr>
         }
     </tbody>
 </table>
 <div>
-    @Html.ActionLink("New shipper", "InsertUpdate", "Shippers", new { @class = "btn btn-success" })
+    @Html.ActionLink("New shipper", "InsertUpdate", "Shippers", new { @class = "btn btn-success" })    
     <button class="btn btn-info" style="color: white; background-color: white;">
         @Html.ActionLink("Home", "Index", "Home")
     </button>

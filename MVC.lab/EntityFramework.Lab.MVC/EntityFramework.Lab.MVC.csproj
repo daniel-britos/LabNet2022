@@ -183,6 +183,7 @@
     <Content Include="Views\Error\Error.cshtml" />
     <Content Include="Views\Shippers\Index.cshtml" />
     <Content Include="Views\Shippers\InsertUpdate.cshtml" />
+    <Content Include="Views\Shippers\Consult.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

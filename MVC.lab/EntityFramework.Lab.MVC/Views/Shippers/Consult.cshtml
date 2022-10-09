@@ -1,0 +1,35 @@
+﻿@model EntityFramework.Lab.MVC.Models.ShippersView
+@{
+    ViewBag.Title = "Consulting shippers";
+}
+
+<div class="titulo">
+    <h2 class="text-center">Shippers:</h2>
+</div>
+<hr />
+<div style="display: flex; justify-content: space-evenly;">
+    <div style="width: 50%">
+        @using (Html.BeginForm("Consult", "Shippers"))
+        {
+            <div class="form-group">
+                <label>ID:</label>
+                @(Html.TextBoxFor(m =>m.Id, new { @class = "form-control", placeholder = "Phone number.", @readonly = "readonly" }))
+            </div>
+            <div class="form-group">
+                <label>Name company:</label>
+                @(Html.TextBoxFor(m => m.NameOfCompany, new { @class= "form-control", placeholder= "Name company.", @readonly = "readonly"  }))
+            </div>
+            <div class="form-group">
+                <label>Phone number:</label>
+                @(Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control", placeholder = "ID." , @readonly = "readonly"  }))
+            </div>
+            <br />
+            @Html.ActionLink("Back", "Index", "Shippers", new { @class = "btn btn-primary" })
+        }
+    </div>
+    <div style="width: 70%; margin: 10px;">
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+    </div>
+</div>

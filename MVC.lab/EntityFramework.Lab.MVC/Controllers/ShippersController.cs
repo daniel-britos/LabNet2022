@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity.Validation;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.UI.WebControls;
@@ -99,6 +100,26 @@ namespace EntityFramework.Lab.MVC.Controllers
             {
                 return RedirectToAction("Index", "Error");
             }
+        }
+        [HttpGet]
+        public ActionResult Consult(int id)
+        {
+            try
+            {
+                Shippers shipper = sLogic.Search(id);
+                ShippersView shippersView = new ShippersView
+                {
+                    Id = shipper.ShipperID,
+                    NameOfCompany = shipper.CompanyName,                        
+                    PhoneNumber = shipper.Phone
+                };
+
+                return View(shippersView);
+            }
+            catch (Exception)
+            {
+                return RedirectToAction("Index", "Error");
+            }            
         }
     }
 }
