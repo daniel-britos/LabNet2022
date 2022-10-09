@@ -11,21 +11,18 @@ namespace EntityFramework.Lab.MVC.Models
     {
         [Key]
         public int Id { get; set; }
-
         [CapitalizeAttribute] //validación custom
         [UpperCaseAttribute] //validación custom
         [SymbolsAttribute] //validación custom
         [StringLength(24)]
         [Required(ErrorMessage = "The name is required.")]
         public string Name { get; set; }
-
         [CapitalizeAttribute] 
         [UpperCaseAttribute]
         [SymbolsAttribute]
         [StringLength(24)]
         [Required(ErrorMessage = "The last name is required.")]
         public string LastName { get; set; }
-
         [Display(Name = "Phone Number")]
         [DataType(DataType.PhoneNumber)]
         [Required(ErrorMessage = "The phone number is required.")]

@@ -14,7 +14,6 @@
             <th scope="col">Delete Employee</th>
         </tr>
     </thead>
-
     <tbody>
         @foreach (var employee in Model)
         {
@@ -27,17 +26,18 @@
                     @Html.ActionLink("Update", "Update", new { id = employee.Id }, new { @class = "btn btn-warning btn-sm" })
                 </td>
                 <td class="text-center">
-                    @Html.ActionLink("Delete", "Delete", new { id = employee.Id }, new { @class = "btn btn-danger btn-sm" })
+                   @Html.ActionLink("Delete", "Delete",
+                   new { id = employee.Id },
+                   new { @class = "btn btn-danger btn-sm" })                 
                 </td>
             </tr>
         }
     </tbody>
-
 </table>
-
 <div>
     @Html.ActionLink("New Employee", "Create", "Employee", new { @class = "btn btn-success" })
     <button class="btn btn-info" style="color: white; background-color: white;">
         @Html.ActionLink("Home", "Index", "Home")
     </button>
 </div>
+

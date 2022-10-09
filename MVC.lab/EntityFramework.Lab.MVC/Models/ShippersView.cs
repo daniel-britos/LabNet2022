@@ -18,7 +18,6 @@ namespace EntityFramework.Lab.MVC.Models
         [SymbolsAttribute] //validación custom
         [StringLength(24)]
         public string NameOfCompany { get; set; }
-
         [Display(Name = "Phone")]
         [DataType(DataType.PhoneNumber)]
         [Required(ErrorMessage = "The phone number is required.")]
