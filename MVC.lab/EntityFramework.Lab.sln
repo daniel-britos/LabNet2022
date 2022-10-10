@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFramework.Lab.LogicTe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFramework.Lab.MVC", "EntityFramework.Lab.MVC\EntityFramework.Lab.MVC.csproj", "{92B007B9-4E47-4916-BCF8-E49FBCC53CF6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFramework.Lab.Api", "EntityFramework.Lab.Api\EntityFramework.Lab.Api.csproj", "{35891542-C0D5-4908-8884-EFF8CA01C1C2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{92B007B9-4E47-4916-BCF8-E49FBCC53CF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92B007B9-4E47-4916-BCF8-E49FBCC53CF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92B007B9-4E47-4916-BCF8-E49FBCC53CF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35891542-C0D5-4908-8884-EFF8CA01C1C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35891542-C0D5-4908-8884-EFF8CA01C1C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35891542-C0D5-4908-8884-EFF8CA01C1C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35891542-C0D5-4908-8884-EFF8CA01C1C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

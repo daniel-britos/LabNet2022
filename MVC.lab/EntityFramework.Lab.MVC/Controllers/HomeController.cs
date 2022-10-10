@@ -12,6 +12,10 @@ namespace EntityFramework.Lab.MVC.Controllers
         {
             return View();
         }
+        public ActionResult Gifs()
+        {
+            return View();
+        }
 
         public ActionResult About()
         {   

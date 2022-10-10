@@ -25,3 +25,94 @@
     font-family: 'Arial Rounded MT';
     background-color: rgba(255,255,255, 0.5);
 }
+
+
+/*#### GIFS ############*/
+#stilish {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: rgba(252, 255, 72, 0.5) !important;
+    box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid white;
+    color: black !important;
+}
+#detail p {
+    font-size: 20px;
+    font-family: "Comic Neue", cursive;
+    margin: 0;
+    padding: 5px;
+    width: 300px;
+}
+
+#detail a {
+    font-size: 20px;
+    margin: 0;
+    padding: 5px;
+    width: 300px;
+}
+/*Titulo*/
+h1Gifs {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 80px;
+    font-family: "Comic Neue", cursive;
+}
+/*buscador*/
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    height: 180px;
+    width: 500px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+#nickname {
+    border-radius: 10px;
+    width: 400px;
+}
+
+#nickname[type="text"] {
+    font-size: 50px;
+    padding-left: 50px;
+}
+
+#btnSearch {
+    margin-top: 20px;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 30px;
+    background: #0d6efd;
+    border: none;
+    border: 1px solid white;
+    color: white;
+}
+
+#btnSearch:hover {
+    background: red;
+}
+
+/*SECTOR GIFTS*/
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}

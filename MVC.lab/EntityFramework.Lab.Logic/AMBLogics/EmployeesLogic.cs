@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -30,21 +31,25 @@ namespace EntityFramework.Lab.Logic
         }
         public void Update(Employees employee)
         {
-            try
+            var employeeUpdate = _context.Employees.Find(employee.EmployeeID);
+            if (employeeUpdate != null)
             {
-                var employeeUpdate = _context.Employees.Find(employee.EmployeeID);
-
-                employeeUpdate.LastName = employee.LastName;
-                employeeUpdate.FirstName = employee.FirstName;
-                employeeUpdate.HomePhone = employee.HomePhone;
-
-                _context.SaveChanges();
+                try
+                {
+                    employeeUpdate.LastName = employee.LastName;
+                    employeeUpdate.FirstName = employee.FirstName;
+                    employeeUpdate.HomePhone = employee.HomePhone;
+                    _context.SaveChanges();
+                }
+                catch (Exception ex)
+                { 
+                    throw new Exception(ex.Message);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                Console.WriteLine(ex.Message);
-                Console.WriteLine("Press enter");
-                Console.ReadKey(true);
+                _context.Employees.Add(employee);
+                _context.SaveChanges();
             }
         }
         public void Delete(int id)
@@ -59,9 +64,7 @@ namespace EntityFramework.Lab.Logic
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                Console.WriteLine("Press enter");
-                Console.ReadKey(true);
+                throw new Exception(ex.Message);
             }
         }
         public Employees Search(int id)
