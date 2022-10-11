@@ -1,9 +1,9 @@
 ﻿@model IEnumerable<EntityFramework.Lab.MVC.Models.DigimonView>
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Digimon Api";
 }
 
-<h2>Digimon Api</h2>
+<h1 class="bg-primary text-center">DIGIMON API</h1>
 
 <table class="table">
     <tr>
@@ -16,21 +16,20 @@
         <th>
             @Html.DisplayNameFor(m => m.Level)
         </th>
-        <th></th>
     </tr>
 
     @foreach (var item in Model)
     {
-        <tr>
-            <td>
-                <div style="background: url(@item.Img); width: 250px; height: 250px;"></div>
-            </td>
-            <td>
-                <input readonly value="@item.Name" />
-            </td>
-            <td>
-                <input readonly value="@item.Level" />
-            </td>
-        </tr>
+        <div class="card loco"
+             style="display: flex; align-items: center; justify-content: center; margin: 15px; ">
+            <div style="border: 4px solid black;">
+                <img class="card-img-top" src="@item.Img" alt="Card image"
+                     style="width:250px; height:250px;">
+                <div class="card-body bg-primary">
+                    <h4 style="margin:0; padding:0;" class="card-title">Name: @item.Name</h4>
+                    <p style="margin:0; padding:0;" class="card-text">Current level of experience: @item.Level</p>
+                </div>
+            </div>
+        </div>
     }
 </table>

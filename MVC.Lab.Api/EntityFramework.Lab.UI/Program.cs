@@ -60,9 +60,7 @@ namespace EntityFramework.Lab.UI
 
             /*API CLIMA*/
             //http://api.weatherunlocked.com/api/current/40.71,-74.00?app_id=2a14523c&app_key=b5f0101353deff3514036987309331b3
-
-
-            //string url = @"https://digimon-api.herokuapp.com/api/digimon";
+            //string url = @"http://api.weatherunlocked.com/api/current/40.71,-74.00?app_id=2a14523c&app_key=b5f0101353deff3514036987309331b3";
             //WebRequest webRequest = WebRequest.Create(url);
             //HttpWebResponse httpWebResponse = null;
             //httpWebResponse = (HttpWebResponse)webRequest.GetResponse();
