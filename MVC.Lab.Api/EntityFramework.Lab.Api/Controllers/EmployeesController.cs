@@ -8,6 +8,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Http;
+using System.Web.Http.Description;
 using System.Web.Mvc;
 using HttpDeleteAttribute = System.Web.Http.HttpDeleteAttribute;
 using HttpPutAttribute = System.Web.Http.HttpPutAttribute;
@@ -18,7 +19,12 @@ namespace EntityFramework.Lab.Api.Controllers
     {
         EmployeesLogic eLogic = new EmployeesLogic();
 
+        /// <summary>
+        /// Return a list of employees
+        /// </summary>
+        /// <returns>Employees list</returns>
         // GET: api/Employees
+        [ResponseType(typeof(EmployeesView))]
         public IHttpActionResult GetAll()
         {
             List<Employees> eList = eLogic.GetAll();
@@ -38,7 +44,15 @@ namespace EntityFramework.Lab.Api.Controllers
             return Ok(eView);
         }
 
+        /// <summary>
+        /// Returns an element by ID.
+        /// </summary>
+        /// <param name="id">ID del empleado.</param>
+        /// <returns>Employee</returns>
+        /// <response code="200">Found item..</response>
+        /// <response code="404">Not Found encontrado.</response>
         // GET: api/Employees/{id}
+        [ResponseType(typeof(EmployeesView))]
         public IHttpActionResult GetEmployeeById(int id)
         {
             try
@@ -67,7 +81,13 @@ namespace EntityFramework.Lab.Api.Controllers
             }
         }
 
+        /// <summary>
+        /// Add an employee to the lis
+        /// </summary>
+        /// <param name="employeesView"></param>
+        /// <returns>Employee created</returns>
         // POST: api/Employees
+        [ResponseType(typeof(EmployeesView))]
         public IHttpActionResult AddEmployee([FromBody]EmployeesView employeesView)
         {
             try
@@ -88,8 +108,13 @@ namespace EntityFramework.Lab.Api.Controllers
             }
         }
 
-        //localhost:44339//api/Employees
-        [HttpPut] 
+        /// <summary>
+        /// Update an employee from the list.
+        /// </summary>
+        /// <param name="employeesView"></param>
+        /// <returns>Employee updated.</returns>        
+        [HttpPut]
+        [ResponseType(typeof(EmployeesView))]
         public IHttpActionResult UpdateEmployee(EmployeesView employeesView)
         {
             try
@@ -111,7 +136,13 @@ namespace EntityFramework.Lab.Api.Controllers
             }
         }
 
+        /// <summary>
+        /// Remove an employee from the list.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Employee deleted.</returns>
         // DELETE: api/Employees/{id}
+        [ResponseType(typeof(EmployeesView))]
         public IHttpActionResult DeleteEmployee(int id)
         {       
             try

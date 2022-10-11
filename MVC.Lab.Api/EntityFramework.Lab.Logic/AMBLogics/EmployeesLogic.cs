@@ -32,25 +32,17 @@ namespace EntityFramework.Lab.Logic
         public void Update(Employees employee)
         {
             var employeeUpdate = _context.Employees.Find(employee.EmployeeID);
-            if (employeeUpdate != null)
+            try
             {
-                try
-                {
-                    employeeUpdate.LastName = employee.LastName;
-                    employeeUpdate.FirstName = employee.FirstName;
-                    employeeUpdate.HomePhone = employee.HomePhone;
-                    _context.SaveChanges();
-                }
-                catch (Exception ex)
-                { 
-                    throw new Exception(ex.Message);
-                }
-            }
-            else
-            {
-                _context.Employees.Add(employee);
+                employeeUpdate.LastName = employee.LastName;
+                employeeUpdate.FirstName = employee.FirstName;
+                employeeUpdate.HomePhone = employee.HomePhone;
                 _context.SaveChanges();
             }
+            catch (Exception ex)
+            { 
+                throw new Exception(ex.Message);
+            }            
         }
         public void Delete(int id)
         {
