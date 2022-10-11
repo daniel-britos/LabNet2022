@@ -1,5 +1,5 @@
 ﻿using EntityFramework.Lab.Entities;
-using EntityFramework.Lab.Logic.AMBLogics;
+using EntityFramework.Lab.Logic.Logic;
 using System;
 using System.Collections.Generic;
 using System.Linq;

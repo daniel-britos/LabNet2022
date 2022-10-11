@@ -1,0 +1,36 @@
+﻿@model IEnumerable<EntityFramework.Lab.MVC.Models.DigimonView>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Digimon Api</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(m => m.Img)
+        </th>
+        <th>
+            @Html.DisplayNameFor(m => m.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(m => m.Level)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                <div style="background: url(@item.Img); width: 250px; height: 250px;"></div>
+            </td>
+            <td>
+                <input readonly value="@item.Name" />
+            </td>
+            <td>
+                <input readonly value="@item.Level" />
+            </td>
+        </tr>
+    }
+</table>

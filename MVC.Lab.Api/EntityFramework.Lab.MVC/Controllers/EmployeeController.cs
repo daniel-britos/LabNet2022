@@ -1,6 +1,6 @@
 ﻿using EntityFramework.Lab.Entities;
 using EntityFramework.Lab.Logic;
-using EntityFramework.Lab.Logic.AMBLogics;
+using EntityFramework.Lab.Logic.Logic;
 using EntityFramework.Lab.MVC.Models;
 using System;
 using System.Collections.Generic;

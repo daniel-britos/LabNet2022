@@ -231,6 +231,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Digimons\" />
     <Folder Include="Views\Employees\" />
     <Folder Include="Views\Gifts\" />
   </ItemGroup>

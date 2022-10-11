@@ -62,7 +62,7 @@ namespace EntityFramework.Lab.UI
             //http://api.weatherunlocked.com/api/current/40.71,-74.00?app_id=2a14523c&app_key=b5f0101353deff3514036987309331b3
 
 
-            //string url = @"https://api.giphy.com/v1/gifs/search?api_key=uOzNt4S1zh2ZqlIy1tzwx3JkZkf2dggG";
+            //string url = @"https://digimon-api.herokuapp.com/api/digimon";
             //WebRequest webRequest = WebRequest.Create(url);
             //HttpWebResponse httpWebResponse = null;
             //httpWebResponse = (HttpWebResponse)webRequest.GetResponse();

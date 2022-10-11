@@ -129,11 +129,13 @@
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\DigimonController.cs" />
     <Compile Include="Controllers\ShippersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\EmployeeView.cs" />
+    <Compile Include="Models\DigimonView.cs" />
     <Compile Include="Models\ShippersView.cs" />
     <Compile Include="Models\Validations\CapitalizeAttribute.cs" />
     <Compile Include="Models\Validations\SymbolsAttribute.cs" />
@@ -186,6 +188,7 @@
     <Content Include="Views\Shippers\InsertUpdate.cshtml" />
     <Content Include="Views\Shippers\Consult.cshtml" />
     <Content Include="Views\Home\Gifs.cshtml" />
+    <Content Include="Views\Digimon\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

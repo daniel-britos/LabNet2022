@@ -6,7 +6,7 @@ using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EntityFramework.Lab.Logic.AMBLogics
+namespace EntityFramework.Lab.Logic.Logic
 {
     public class ShippersLogic : BaseLogic
     {

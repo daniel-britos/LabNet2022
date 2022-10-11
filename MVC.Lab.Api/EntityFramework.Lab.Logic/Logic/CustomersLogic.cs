@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EntityFramework.Lab.Logic.AMBLogics
+namespace EntityFramework.Lab.Logic.Logic
 {
     public class CustomersLogic : BaseLogic
     {

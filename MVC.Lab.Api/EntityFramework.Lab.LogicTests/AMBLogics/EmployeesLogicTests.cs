@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using EntityFramework.Lab.Logic.AMBLogics;
+using EntityFramework.Lab.Logic.Logic;
 using EntityFramework.Lab.Entities;
 
 namespace EntityFramework.Lab.Logic.Tests
