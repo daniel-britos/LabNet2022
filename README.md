@@ -1,4 +1,7 @@
-<h3>Utilizar Swagger para mejorar la experiencia con la revisión de endpoints</h3><br/>
+<h3>Utilizar Swagger para mejorar la experiencia con la revisión de endpoints</h3>
 <hr/>
-<p>- En esta etapa se desarrolló un servicio de endpoints para la entidad de empleados.</p><br/>
-<p>- Se consumió una api pública de gifs y se desarrolló un buscador para la elección del gifs que el usuario guste ver.</p><br/>
+<p>- En esta etapa se desarrolló un servicio de endpoints para la entidad de empleados.</p>
+<p>- Se consumió una api pública de gifs implementando Ajax, y se desarrolló un buscador para la elección del gifs que el usuario guste ver.</p>
+<p>- Se consumió una api usando c# y se listó el contenido de la api.</p>
+<hr/>
+
