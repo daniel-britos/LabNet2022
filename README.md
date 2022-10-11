@@ -4,5 +4,8 @@
 <p>- Se consumió una api pública de gifs implementando Ajax, y se desarrolló un buscador para la elección del gifs que el usuario guste ver.</p>
 <p>- Se consumió una api usando c# y se listó el contenido de la api.</p>
 <hr/>
-
 <img src="https://raw.githubusercontent.com/daniel-britos/LabNet2022/tp8-WebApis%2BSwagger/img/apis.jpg">
+<hr/>
+<img src="https://raw.githubusercontent.com/daniel-britos/LabNet2022/tp8-WebApis%2BSwagger/img/swagger.jpg">
+<hr/>
+<img src="https://raw.githubusercontent.com/daniel-britos/LabNet2022/tp8-WebApis%2BSwagger/img/swagger2.jpg">
