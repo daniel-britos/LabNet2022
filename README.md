@@ -5,3 +5,4 @@
 <p>- Se consumió una api usando c# y se listó el contenido de la api.</p>
 <hr/>
 
+<img src="https://raw.githubusercontent.com/daniel-britos/LabNet2022/tp8-WebApis%2BSwagger/img/apis.jpg">
