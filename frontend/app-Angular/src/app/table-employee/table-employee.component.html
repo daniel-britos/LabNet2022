@@ -1,0 +1,19 @@
+<table class="table table-bordered border-primary">
+  <thead>
+    <tr class="bg-primary text-white">
+      <th scope="col">ID</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Phone Number</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody class="table-group-divider bg-success" style="--bs-bg-opacity: .4;">
+    <tr *ngFor = 'let item of employeeList'>
+      <th scope="row">{{item.Id}}</th>
+      <td class="text-black">{{item.Name}}</td>
+      <td class="text-black">{{item.LastName}}</td>
+      <td class="text-black">{{item.Phone}}</td>
+      <button type="button" class="btn btn-danger mx-3" (click)="deleteEmployee(item.Id)">Delete</button>
+    </tr>
+</table>

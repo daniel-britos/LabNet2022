@@ -1,0 +1,28 @@
+<form [formGroup]="formEmployee" (ngSubmit)="onSubmit()">
+  <div class="mb-2">
+      <label class="input-group-text">Name</label>
+      <input type="text" class="form-control" formControlName="Name" required>
+      <div class="text-danger" *ngIf="formEmployee.get('Name')?.hasError('required') && formEmployee.get('name')?.touched">
+        <span>The name is <strong>required.</strong></span>
+      </div>
+  </div>
+  <div class="mb-2">
+    <label class="input-group-text">LastName</label>
+    <input type="text" class="form-control" formControlName="LastName" required>
+    <div class="text-danger" *ngIf="formEmployee.get('LastName')?.hasError('required') && formEmployee.get('LastName')?.touched">
+      <span>The last name is <strong>required.</strong></span>
+    </div>
+</div>
+<div class="mb-2">
+  <label class="input-group-text">Phone</label>
+  <input type="text" class="form-control" formControlName="Phone" required>
+  <div class="text-danger" *ngIf="formEmployee.get('Phone')?.hasError('required') && formEmployee.get('Phone')?.touched">
+    <span>The phone is <strong>required.</strong></span>
+  </div>
+</div>
+  <button type="submit"
+          class="m-2 btn btn-primary"
+          onClick="window.location.reload()"
+          [disabled]="formEmployee.invalid" (click)="saveEmployee()">Save</button>
+  <button type="reset" class="btn btn-danger" (click)="cleanForm()">Clean</button>
+</form>

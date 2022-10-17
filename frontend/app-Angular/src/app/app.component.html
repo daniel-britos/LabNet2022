@@ -1,0 +1,22 @@
+
+<header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+  <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+    <span class="fs-4 bg-primary text-white">FORMULARY EMPLOYEES</span>
+  </a>
+</header>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-4">
+      <div class="card sticky-top">
+        <h1>FORMULARY</h1>
+        <app-form-employee></app-form-employee>
+      </div>
+    </div>
+    <div class="col-8">
+      <h1>EMPLOYEES LIST</h1>
+        <app-table-employee></app-table-employee>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
