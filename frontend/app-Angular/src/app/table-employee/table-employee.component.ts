@@ -33,12 +33,10 @@ export class TableEmployeeComponent implements OnInit {
   }
 
   updateEmployee(request: Employee) {
-    console.log("Valor del request: " + request);
-    this.modelEmployee.Id = request.Id;
-    this.modelEmployee.Name = request.Name;
-    this.modelEmployee.LastName = request.LastName;
-    this.modelEmployee.Phone = request.Phone;
-    this.connectionDbService.updateEmployee(request);
+      this.modelEmployee.Id = request.Id;
+      this.modelEmployee.Name = request.Name;
+      this.modelEmployee.LastName = request.LastName;
+      this.modelEmployee.Phone = request.Phone;
   }
 }
 
