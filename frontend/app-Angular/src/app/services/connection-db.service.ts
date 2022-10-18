@@ -28,7 +28,7 @@ export class ConnectionDbService {
     return this.http.delete(this.url + "/" + id);
   }
 
-  updateCategoria(id: number, employee: Employee): Observable<any>{
+  updateEmployee(id: number, employee: Employee): Observable<any>{
     return this.http.put(this.url + "/" + id, employee)
   }
 
