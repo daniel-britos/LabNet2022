@@ -11,6 +11,8 @@ export class ConnectionDbService {
   /* https://localhost:44339/api/Employees */
   endpoint: string = 'api/Employees';
   url: string = environment.apiEmployee + this.endpoint;
+
+
   constructor(private http: HttpClient) { }
 
   public addEmployee(request: Employee): Observable<any> {
@@ -26,24 +28,8 @@ export class ConnectionDbService {
     return this.http.delete(this.url + "/" + id);
   }
 
-  public updateEmployee(request: Employee): Observable<Employee> {
-    return this.http.put<Employee>(this.url, request);
+  updateCategoria(id: number, employee: Employee): Observable<any>{
+    return this.http.put(this.url + "/" + id, employee)
   }
 
-
-
-
-
-
-
-
-
-
-
-  // public updateShipper(request: Employee, id: number): Observable<Employee> {
-  //   let url = environment.apiEmployee + this.endpoint;
-  //   return this.http.put<any>(url + "/" + id, request).pipe(Map((res:any) => {
-  //     return res;
-  //   }));
-  // }
 }

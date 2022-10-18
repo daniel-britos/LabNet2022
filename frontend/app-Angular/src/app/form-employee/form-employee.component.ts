@@ -42,6 +42,7 @@ export class FormEmployeeComponent implements OnInit {
       console.log("Employee added");
     });
   }
+
   cleanForm(): void {
     this.formEmployee.reset();
   }

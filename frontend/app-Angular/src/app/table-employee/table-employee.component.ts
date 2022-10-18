@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Employee } from '../models/employee';
 import { ConnectionDbService } from '../services/connection-db.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-table-employee',
@@ -9,9 +10,12 @@ import { ConnectionDbService } from '../services/connection-db.service';
 })
 export class TableEmployeeComponent implements OnInit {
 
-  modelEmployee!: Employee
+  formEmployee!: FormGroup;
+  id!:number;
+
+  //modelEmployee!: Employee
   public employeeList: Array<Employee> = [];
-  constructor(private connectionDbService: ConnectionDbService) { }
+  constructor(private readonly fb: FormBuilder, private connectionDbService: ConnectionDbService) { }
 
   ngOnInit(): void {
     this.getEmployees();
@@ -32,11 +36,13 @@ export class TableEmployeeComponent implements OnInit {
     }
   }
 
-  updateEmployee(request: Employee) {
-      this.modelEmployee.Id = request.Id;
-      this.modelEmployee.Name = request.Name;
-      this.modelEmployee.LastName = request.LastName;
-      this.modelEmployee.Phone = request.Phone;
-  }
+  modifyEmployee(request: Employee) {
+    this.id = request.Id
+    this.formEmployee.patchValue({
+      Name: request.Name,
+      LastName: request.LastName,
+      Phone: request.Phone
+    })
+  };
 }
 
