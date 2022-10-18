@@ -9,6 +9,7 @@ import { ConnectionDbService } from '../services/connection-db.service';
 })
 export class TableEmployeeComponent implements OnInit {
 
+  modelEmployee!: Employee
   public employeeList: Array<Employee> = [];
   constructor(private connectionDbService: ConnectionDbService) { }
 
@@ -22,4 +23,22 @@ export class TableEmployeeComponent implements OnInit {
       console.log(this.employeeList);
     })
   }
+
+  deleteEmployee(employee: any){
+    if(window.confirm('¿Are you sure?')){
+      this.connectionDbService.deleteEmployee(employee.Id).subscribe(res =>{
+        this.getEmployees();
+      });
+    }
+  }
+
+  updateEmployee(request: Employee) {
+    console.log("Valor del request: " + request);
+    this.modelEmployee.Id = request.Id;
+    this.modelEmployee.Name = request.Name;
+    this.modelEmployee.LastName = request.LastName;
+    this.modelEmployee.Phone = request.Phone;
+    this.connectionDbService.updateEmployee(request);
+  }
 }
+

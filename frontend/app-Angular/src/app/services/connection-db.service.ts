@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 export class ConnectionDbService {
   /* https://localhost:44339/api/Employees */
   endpoint: string = 'api/Employees';
-
+  url: string = environment.apiEmployee + this.endpoint;
   constructor(private http: HttpClient) { }
 
   public addEmployee(request: Employee): Observable<any> {
@@ -19,13 +19,31 @@ export class ConnectionDbService {
   }
 
   public getEmployeesList(): Observable<Array<Employee>> {
-    /* Concatenating the apiEmployee and endpoint variables to create a url. */
-    let url = environment.apiEmployee + this.endpoint;
-    return this.http.get<Array<Employee>>(url);
+    return this.http.get<Array<Employee>>(this.url);
   }
 
   public deleteEmployee(id: number): Observable<any> {
-    let url = environment.apiEmployee + this.endpoint;
-    return this.http.delete(url + "/" + id);
+    return this.http.delete(this.url + "/" + id);
   }
+
+  public updateEmployee(request: Employee): Observable<Employee> {
+    return this.http.put<Employee>(this.url, request);
+  }
+
+
+
+
+
+
+
+
+
+
+
+  // public updateShipper(request: Employee, id: number): Observable<Employee> {
+  //   let url = environment.apiEmployee + this.endpoint;
+  //   return this.http.put<any>(url + "/" + id, request).pipe(Map((res:any) => {
+  //     return res;
+  //   }));
+  // }
 }

@@ -2,7 +2,7 @@
   <div class="mb-2">
       <label class="input-group-text">Name</label>
       <input type="text" class="form-control" formControlName="Name" required>
-      <div class="text-danger" *ngIf="formEmployee.get('Name')?.hasError('required') && formEmployee.get('name')?.touched">
+      <div class="text-danger" *ngIf="formEmployee.get('Name')?.hasError('required') && formEmployee.get('Name')?.touched">
         <span>The name is <strong>required.</strong></span>
       </div>
   </div>
