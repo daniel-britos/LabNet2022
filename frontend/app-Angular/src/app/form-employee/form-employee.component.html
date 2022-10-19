@@ -23,11 +23,10 @@
 </div>
   <button type="submit"
           class="m-2 btn btn-primary"
+          onClick="window.location.reload()"
+          [disabled]="formEmployee.invalid"
           (click)="saveEmployee()">{{edit}}</button>
   <button type="reset" class="btn btn-danger" (click)="cleanForm()">Clean</button>
   <p>{{formEmployee.value | json}}</p>
 </form>
 
-<!--
-Subjet<Employe>
--->
