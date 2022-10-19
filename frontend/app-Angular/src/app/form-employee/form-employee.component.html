@@ -1,4 +1,5 @@
-<form [formGroup]="formEmployee" (ngSubmit)="onSubmit()">
+<form [formGroup]="formEmployee">
+  <p>{{employee | json}}</p>
   <div class="mb-2">
       <label class="input-group-text">Name</label>
       <input type="text" class="form-control" formControlName="Name" required>
@@ -22,7 +23,11 @@
 </div>
   <button type="submit"
           class="m-2 btn btn-primary"
-          onClick="window.location.reload()"
-          [disabled]="formEmployee.invalid" (click)="saveEmployee()">Save</button>
+          (click)="saveEmployee()">{{edit}}</button>
   <button type="reset" class="btn btn-danger" (click)="cleanForm()">Clean</button>
+  <p>{{formEmployee.value | json}}</p>
 </form>
+
+<!--
+Subjet<Employe>
+-->

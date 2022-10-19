@@ -127,7 +127,6 @@ namespace EntityFramework.Lab.Api.Controllers
                     HomePhone = employeesView.Phone
                 };
                 eLogic.Update(employee);
-
                 return Ok("EMPLOYEE UPDATED");
             }
             catch (Exception)
