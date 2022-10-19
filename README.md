@@ -28,4 +28,7 @@
     <li>
       <h6>WEB API + Swagger</h6>      
     </li>
+    <li>
+      <h6>Angular</h6>      
+    </li>
 </ul>
